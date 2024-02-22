@@ -3,7 +3,7 @@
 
 ?>
 <div class="form-container">
-    <h2>Danh sách tài khoản</h2>
+    <h2>Danh sách bình luận</h2>
     
     <div class="contents">
         <div class="content">
@@ -12,27 +12,23 @@
                     
                     <th>ID</th>
                     <th>Tên Người Dùng</th>
-                    <th>MẬT KHẨU</th>
-                    <th>EMAIL</th>
-                    <th>ĐỊA CHỈ</th>
-                    <th>SỐ ĐIỆN THOẠI</th>
-                    <th>VAI TRÒ</th>
+                    <th>Sản phẩm</th>
+                    <th>Nội dung</th>
+                    <th>Ngày bình luận</th>
+                    
                    
                 </tr>
                 <?php
-                foreach ($listtk as $tk) {
-                    extract($tk);
-
-                    
+                foreach ($listbl as $bl) {
+                    extract($bl);
                     $xoasp = "./index.php?act=deletetk&id=" . $id;
                     echo ' <tr>
                             <td>'.$id.'</td>
                             <td>'.$user.'</td>
-                            <td>'.$pass.'</td>
-                            <td>'.$email.'</td>
-                            <td>'.$address.'</td>
-                            <td>'.$tel.'</td>
-                            <td>'.$role.'</td>
+                            <td>'.$name.'</td>
+                            <td>'.$noidung.'</td>
+                            <td>'.date("d-m-y", strtotime($ngaybinhluan)).'</td>
+                            
                             
                         </tr>';
                 }
