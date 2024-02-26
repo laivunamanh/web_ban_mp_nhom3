@@ -15,7 +15,8 @@
 
                  <div class="btn-dn">
                      <input type="submit" value="Đăng kí" name="dangki"> <br>
-                     <a href="index.php?act=dangnhap">Đăng nhập?</a>
+                     <button><a href="index.php?act=dangnhap" style="color: white; text-decoration: none;">Đăng nhập</a></button>
+                     
 
                  </div>
              </div>
@@ -25,14 +26,14 @@
 
              </div>
          </form>
-         <h6 style="color: green;">
+         <h5 style="color: green; text-align: center;">
              <?php
             
                     if(isset($thongbao)&&($thongbao!="")){
                         echo $thongbao;
                     }
                 ?>
-         </h6>
+         </h5>
      </div>
 
 

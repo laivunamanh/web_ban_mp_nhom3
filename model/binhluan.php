@@ -7,5 +7,9 @@ function insert_binhluan($idpro, $noidung,$iduser){
          VALUES ('$noidung','$iduser','$idpro','$ngaybinhluan')";
     pdo_execute($sql);
 }
+function delete_binhluan($id){
+    $sql = "DELETE FROM binhluan where id=" .$id;
+    pdo_execute($sql);
+}
 
 ?>

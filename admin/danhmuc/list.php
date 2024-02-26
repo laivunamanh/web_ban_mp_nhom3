@@ -25,7 +25,7 @@
                             <td>'.$id.'</td>
                             <td>'.$name.'</td>
                             <td><a href ="' . $suadm . '"> <input type="button" value="Sửa"></a> 
-                            <a href ="' . $xoadm . '"> <input type="button" value="Xóa"></a></td>
+                            <a href ="' . $xoadm . '" onclick="return confirm(\'Bạn có chắc muốn xóa không?\')"> <input  type="button" value="Xóa"></a></td>
                             
                         </tr>';
                 }

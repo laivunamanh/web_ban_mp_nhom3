@@ -14,7 +14,7 @@
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Nhớ mật khẩu
                     </label>
-                    <br> <button><a href="index.php?act=dangki">Đăng kí ngay</a></button>
+                    <br> <button ><a href="index.php?act=dangki" style="color: white; text-decoration: none;">Đăng kí ngay</a></button>
                 </div>
             </div>
 
@@ -23,14 +23,14 @@
                 <span class="psw">Quên <a href="index.php?act=quenmk">mật khẩu?</a></span>
             </div>
         </form>
-        <h6 style="color: red;">
+        <h5 style="color: red; text-align: center;">
             <?php
             
             if(isset($thongbao)&&($thongbao!="")){
                 echo $thongbao;
             }
         ?>
-        </h6>
+        </h5>
 
     </div>
 

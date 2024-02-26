@@ -9,9 +9,7 @@ include "model/giohang.php";
 include "model/donhang.php";
 include "model/binhluan.php";
 
-// if (isset($user['id'])) {
-//     $id = $user['id'];
-// }
+
 $total_prod_giohang = 0;
 
 if (isset($_SESSION['user']['id'])) {
@@ -36,7 +34,7 @@ if (isset($_GET['act'])) {
         case 'sanphamct':
             if (isset($_POST['guibinhluan'])) {
                 extract($_POST);
-                //var_dump($_POST);
+
                 insert_binhluan($idpro, $noidung, $iduser);
             }
             if (isset($_GET['idsp']) && ($_GET > 0)) {
@@ -63,7 +61,7 @@ if (isset($_GET['act'])) {
                 $iddm = 0;
             }
             $dssp = loadall_sanpham($kyw, $iddm);
-            // $tendm= load_tendm($iddm);
+
             include "view/sanpham.php";
 
             break;

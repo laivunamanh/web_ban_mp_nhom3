@@ -15,6 +15,7 @@
                     <th>Sản phẩm</th>
                     <th>Nội dung</th>
                     <th>Ngày bình luận</th>
+                    <th>Tùy chỉnh</th>
                     
                    
                 </tr>
@@ -22,13 +23,14 @@
                 foreach ($listbl as $bl) {
                     extract($bl);
                     $xoasp = "./index.php?act=deletetk&id=" . $id;
+                    $xoabl = "./index.php?act=deletebl&id=" . $id;
                     echo ' <tr>
                             <td>'.$id.'</td>
                             <td>'.$user.'</td>
                             <td>'.$name.'</td>
                             <td>'.$noidung.'</td>
                             <td>'.date("d-m-y", strtotime($ngaybinhluan)).'</td>
-                            
+                            <td><a href ="' . $xoabl . '"> <input type="button" value="Xóa"></a></td>
                             
                         </tr>';
                 }
